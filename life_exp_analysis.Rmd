@@ -21,7 +21,8 @@ install.packages("gapminder")
  Here I examine the analysis of Oeppen and Vaupel (2002)
  again
  
- #Data
+ #Life Expectancy Analysis
+ - I have added some comments and even more comments 
  
 ```{r}
 install.packages("contrib.url")
@@ -48,9 +49,4 @@ gapminder_unfiltered %>%
   select(year, country, lifeExp) %>%
   arrange(year) -> 
   sumdat 
-```
-
-```{r}
-library(knitr)
-library(tinytex)
 ```
