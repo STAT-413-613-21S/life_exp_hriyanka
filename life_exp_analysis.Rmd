@@ -2,8 +2,10 @@
 title: "Examine Life Expectancy"
 author: "Hriyanka Shah"
 date: "`r Sys.Date()`"
-output: word_document
-urlcolor: "blue"
+output:
+  html_document:
+    df_print: paged
+urlcolor: blue
 ---
 
 ```{r setup, include=FALSE}
@@ -17,6 +19,38 @@ install.packages("gapminder")
  #Abstract
  
  Here I examine the analysis of Oeppen and Vaupel (2002)
+ again
  
- #Analysis
+ #Data
  
+```{r}
+install.packages("contrib.url")
+```
+ 
+ 
+```{r}
+library(gapminder)
+library(tidyverse)
+```
+ 
+ 
+```{r}
+data <-data(gapminder_unfiltered)
+View(gapminder_unfiltered)
+```
+ 
+```{r}
+library(dplyr)
+gapminder_unfiltered %>%
+  group_by(year) %>%
+  filter(lifeExp== max(lifeExp)) %>%
+  ungroup() %>%
+  select(year, country, lifeExp) %>%
+  arrange(year) -> 
+  sumdat 
+```
+
+```{r}
+library(knitr)
+library(tinytex)
+```
