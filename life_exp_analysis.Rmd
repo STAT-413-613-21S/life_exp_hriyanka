@@ -1,0 +1,22 @@
+---
+title: "Examine Life Expectancy"
+author: "Hriyanka Shah"
+date: "`r Sys.Date()`"
+output: word_document
+urlcolor: "blue"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+install.packages("tidyverse")
+install.packages("gapminder")
+```
+ #Abstract
+ 
+ Here I examine the analysis of Oeppen and Vaupel (2002)
+ 
+ #Analysis
+ 
