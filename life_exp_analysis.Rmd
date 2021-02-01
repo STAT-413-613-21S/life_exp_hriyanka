@@ -24,11 +24,7 @@ install.packages("gapminder")
  #Life Expectancy Analysis
  - I have added some comments and even more comments 
  
-```{r}
-install.packages("contrib.url")
-```
- 
- 
+
 ```{r}
 library(gapminder)
 library(tidyverse)
